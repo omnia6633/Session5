@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Selectors & Attributes</title>
+
+</head>
+<body>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.selector-container {
+  border: 2px dashed #2c3eec;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 1000px;
+  margin-bottom: 40px;
+}
+
+.selector-container h3 {
+  color: #2c3eec;
+  border-bottom: 2px solid #2c3eec;
+  padding-bottom: 10px;
+}
+
+.selector-box {
+  background-color: #e8edf1;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.selector-box div, .selector-box div {
+  background-color: #dce3e9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.attribute-container {
+  border: 2px dashed #28a745;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 1000px;
+}
+
+.attribute-container h3 {
+  color: #28a745;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 10px;
+}
+
+.attribute-box {
+  background-color: #edf7ed;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.attribute-box a {
+  text-decoration: none;
+  color: #3b1579;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 14px;
+  margin: 5px 6px 0 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:nth-child(1) { background-color: #3569e6; }  
+button:nth-child(2) { background-color: #28a745; }  
+button:nth-child(3) { background-color: #dc3545; } 
+button:nth-child(4) { background-color: #6f42c1; }  
+button:nth-child(5) { background-color: #17a2b8; } 
+
+button:hover {
+  opacity: 0.9;
+}
+</style>
+  
+  <div class="selector-container">
+    <h3>Selector Methods Demonstration</h3>
+
+    <div class="selector-box">
+      <div id="myId">Element selected by ID</div>
+      <div class="myClass">Element with class (1)</div>
+      <div class="myClass">Element with class (2)</div>
+      <div class="myClaa">Paragraph inside div</div>
+
+      <div class="buttons">
+        <button onclick="getElementByIdDemo()">getElementById</button>
+        <button onclick="getElementsByClassNameDemo()">getElementsByClassName</button>
+        <button onclick="getElementsByTagNameDemo()">getElementsByTagName</button>
+        <button onclick="querySelectorDemo()">querySelector</button>
+        <button onclick="querySelectorAllDemo()">querySelectorAll</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribute-container">
+    <h3>Attribute Manipulation</h3>
+
+    <div class="attribute-box">
+      <p><strong>Change Element Attributed</strong></p>
+      
+      <p>
+        <a id="myLink" href="https://www.google.com/" target="_blank">Google Link</a>
+      </p>
+
+      <div class="buttons">
+        <button onclick="changeLink()">Change Link</button>
+        <button onclick="getLink()">Get Link</button>
+        <button onclick="removeLink()">Remove Link</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
